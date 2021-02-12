@@ -29,7 +29,7 @@
     "clean": "npx st-rm-rf dist",
     "prebuild": "yarn clean",
     "build": " tsc && rimraf dist/**/*.js",
-    "postbuild": "npx st-cp tsconfig.json package.json .npmignore README.md LICENSE dist",
+    "postbuild": "npx st-cp package.json .npmignore README.md LICENSE dist",
     "prerelease": "yarn build",
     "release": "cd dist && yarn publish",
     "format:fix": "pretty-quick --verbose --pattern 'src/**/*.ts{,x}'",
@@ -67,8 +67,6 @@
     "husky": "^4.3.8",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "ts-jest": "^26.5.0",
-    "ts-node": "^9.1.1",
     "typescript": "^4.1.3",
     "rimraf": "^3.0.2"
   }

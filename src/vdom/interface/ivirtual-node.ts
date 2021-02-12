@@ -10,7 +10,9 @@ export interface IVirtualNode<A = IVirtualNodeAttributes> {
   children: IVirtualChildren;
 }
 
-export type IVirtualNodeType = string;
+// string as in "div" creates an HTMLElement in the renderer
+// function as in functional component is called to return a VDOM object
+export type IVirtualNodeType = string | any;
 export type IVirtualKey = string | number | any;
 export type IVirtualRefObject<T> = { current?: T | null };
 export type IVirtualRefCallback<T> = (instance: T | null) => void;

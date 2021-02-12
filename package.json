@@ -1,6 +1,6 @@
 {
   "name": "springtype-types",
-  "version": "3.2.3",
+  "version": "3.2.4",
   "publishConfig": {
     "access": "public"
   },
@@ -28,7 +28,7 @@
   "scripts": {
     "clean": "npx st-rm-rf dist",
     "prebuild": "yarn clean",
-    "build": " tsc && rimraf dist/**/*.js",
+    "build": " tsc && rimraf dist/**/*.js && touch dist/index.js",
     "postbuild": "npx st-cp package.json .npmignore README.md LICENSE dist",
     "prerelease": "yarn build",
     "release": "cd dist && yarn publish",

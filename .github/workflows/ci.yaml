@@ -23,8 +23,8 @@ jobs:
     needs: [build]
     name: npm-publish
     runs-on: ubuntu-latest
-    # only on master
-    if: github.ref == 'refs/heads/master'
+    # only on main
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1

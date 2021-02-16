@@ -1165,11 +1165,6 @@ declare global {
     }
 
     export interface KeyFrameProperties {
-      /**
-       * additional field to set get the animation name
-       * without cutting it out from an other string
-       */
-      animationName: string;
       from?: Partial<CSSStyleDeclaration>;
       to?: Partial<CSSStyleDeclaration>;
       '0%'?: Partial<CSSStyleDeclaration>;

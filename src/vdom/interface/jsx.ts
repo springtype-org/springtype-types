@@ -1,8 +1,6 @@
 import { IAttributes, TRef } from './iattributes';
 import { Ref } from './ref';
-import { CSSStyleDeclaration as OwnCSSStyleDeclaration } from './icss-style-declaration';
-import { FontFaceProperties as OwnFontFaceProperties } from './ifont-face-properties';
-import { KeyFrameProperties as OwnKeyFrameProperties } from './ikey-frame-properties';
+import { CSSProperties } from './icss-properties';
 
 declare global {
   namespace JSX {
@@ -792,7 +790,7 @@ declare global {
       srclang?: string;
       start?: number;
       step?: number | string;
-      style?: string | Partial<CSSStyleDeclaration>;
+      style?: string | Partial<CSSProperties>;
       summary?: string;
       tabindex?: number | string;
       target?: string;
@@ -940,7 +938,7 @@ declare global {
       srcSet?: string;
       start?: number;
       step?: number | string;
-      style?: string | Partial<CSSStyleDeclaration>;
+      style?: string | Partial<CSSProperties>;
       summary?: string;
       tabIndex?: number | string;
       target?: string;
@@ -1138,29 +1136,6 @@ declare global {
       text: SVGAttributes;
       tspan: SVGAttributes;
       use: SVGAttributes;
-    }
-
-    interface CSSStyleDeclaration extends OwnCSSStyleDeclaration {
-      /**
-       * The index signature was removed to enable closed typing for style
-       * using CSSType. You're able to use type assertion or module augmentation
-       * to add properties or an index signature of your own.
-       *
-       * For examples and more information, visit:
-       * https://github.com/frenic/csstype#what-should-i-do-when-i-get-type-errors
-       */
-    }
-
-    interface FontFaceProperties extends OwnFontFaceProperties {
-      /**
-       * Extend from interface namespace stuff is not working well
-       */
-    }
-
-    interface KeyFrameProperties extends OwnKeyFrameProperties {
-      /**
-       * Extend from interface namespace stuff is not working well
-       */
     }
 
     // addition for <fragment unwrap>

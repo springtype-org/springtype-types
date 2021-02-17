@@ -7,5 +7,8 @@ export * from './vdom/interface/ivirtual-node';
 export * from './vdom/interface/jsx';
 export * from './vdom/interface/props';
 export * from './vdom/interface/ref';
+export * from './vdom/interface/icss-properties';
+export * from './vdom/interface/ikey-frame-properties';
+export * from './vdom/interface/ifont-face-properties';
 
 export * from './global.dt';

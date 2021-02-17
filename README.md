@@ -3,8 +3,8 @@
 <p align="center">
 This is a peer dependency of SpringType and some of it's libraries.
 </p>
-
 <p align="center">
+  <a href="https://github.com/springtype-org/springtype-types"><img src="https://github.com/springtype-org/springtype-types/workflows/Node%20CI/badge.svg?branch=main" alt="SpringType on Github"/></a>
   <a href="https://www.npmjs.com/package/springtype-types"><img src="https://img.shields.io/npm/v/springtype-types.svg?style=flat-square" alt="SpringType Types NPM version"/></a>
   <a href="https://gitter.im/springtype-official/springtype?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/springtype-official/springtype.svg" alt="Gitter Chat" /></a>
 </p>

@@ -1,7 +1,8 @@
-import * as CSS from 'csstype';
-import { Property } from 'csstype';
 import { IAttributes, TRef } from './iattributes';
 import { Ref } from './ref';
+import { CSSStyleDeclaration as OwnCSSStyleDeclaration } from './icss-style-declaration';
+import { FontFaceProperties as OwnFontFaceProperties } from './ifont-face-properties';
+import { KeyFrameProperties as OwnKeyFrameProperties } from './ikey-frame-properties';
 
 declare global {
   namespace JSX {
@@ -1139,7 +1140,7 @@ declare global {
       use: SVGAttributes;
     }
 
-    export interface CSSStyleDeclaration extends CSS.Properties<string | number> {
+    interface CSSStyleDeclaration extends OwnCSSStyleDeclaration {
       /**
        * The index signature was removed to enable closed typing for style
        * using CSSType. You're able to use type assertion or module augmentation
@@ -1150,124 +1151,16 @@ declare global {
        */
     }
 
-    export interface FontFaceProperties {
-      MozFontFeatureSettings?: Property.FontFeatureSettings;
-      fontDisplay?: 'auto' | 'block' | 'fallback' | 'optional' | 'swap' | (string & {});
-      fontFamily?: Property.FontFamily;
-      fontFeatureSettings?: Property.FontFeatureSettings;
-      fontStretch?: Property.FontStretch;
-      fontStyle?: Property.FontStyle;
-      fontVariant?: Property.FontVariant;
-      fontVariationSettings?: Property.FontVariationSettings;
-      fontWeight?: Property.FontWeight;
-      src?: string;
-      unicodeRange?: string;
+    interface FontFaceProperties extends OwnFontFaceProperties {
+      /**
+       * Extend from interface namespace stuff is not working well
+       */
     }
 
-    export interface KeyFrameProperties {
-      from?: Partial<CSSStyleDeclaration>;
-      to?: Partial<CSSStyleDeclaration>;
-      '0%'?: Partial<CSSStyleDeclaration>;
-      '1%'?: Partial<CSSStyleDeclaration>;
-      '2%'?: Partial<CSSStyleDeclaration>;
-      '3%'?: Partial<CSSStyleDeclaration>;
-      '4%'?: Partial<CSSStyleDeclaration>;
-      '5%'?: Partial<CSSStyleDeclaration>;
-      '6%'?: Partial<CSSStyleDeclaration>;
-      '7%'?: Partial<CSSStyleDeclaration>;
-      '8%'?: Partial<CSSStyleDeclaration>;
-      '9%'?: Partial<CSSStyleDeclaration>;
-      '10%'?: Partial<CSSStyleDeclaration>;
-      '11%'?: Partial<CSSStyleDeclaration>;
-      '12%'?: Partial<CSSStyleDeclaration>;
-      '13%'?: Partial<CSSStyleDeclaration>;
-      '14%'?: Partial<CSSStyleDeclaration>;
-      '15%'?: Partial<CSSStyleDeclaration>;
-      '16%'?: Partial<CSSStyleDeclaration>;
-      '17%'?: Partial<CSSStyleDeclaration>;
-      '18%'?: Partial<CSSStyleDeclaration>;
-      '19%'?: Partial<CSSStyleDeclaration>;
-      '20%'?: Partial<CSSStyleDeclaration>;
-      '21%'?: Partial<CSSStyleDeclaration>;
-      '22%'?: Partial<CSSStyleDeclaration>;
-      '23%'?: Partial<CSSStyleDeclaration>;
-      '24%'?: Partial<CSSStyleDeclaration>;
-      '25%'?: Partial<CSSStyleDeclaration>;
-      '26%'?: Partial<CSSStyleDeclaration>;
-      '27%'?: Partial<CSSStyleDeclaration>;
-      '28%'?: Partial<CSSStyleDeclaration>;
-      '29%'?: Partial<CSSStyleDeclaration>;
-      '30%'?: Partial<CSSStyleDeclaration>;
-      '31%'?: Partial<CSSStyleDeclaration>;
-      '32%'?: Partial<CSSStyleDeclaration>;
-      '33%'?: Partial<CSSStyleDeclaration>;
-      '34%'?: Partial<CSSStyleDeclaration>;
-      '35%'?: Partial<CSSStyleDeclaration>;
-      '36%'?: Partial<CSSStyleDeclaration>;
-      '37%'?: Partial<CSSStyleDeclaration>;
-      '38%'?: Partial<CSSStyleDeclaration>;
-      '39%'?: Partial<CSSStyleDeclaration>;
-      '40%'?: Partial<CSSStyleDeclaration>;
-      '41%'?: Partial<CSSStyleDeclaration>;
-      '42%'?: Partial<CSSStyleDeclaration>;
-      '43%'?: Partial<CSSStyleDeclaration>;
-      '44%'?: Partial<CSSStyleDeclaration>;
-      '45%'?: Partial<CSSStyleDeclaration>;
-      '46%'?: Partial<CSSStyleDeclaration>;
-      '47%'?: Partial<CSSStyleDeclaration>;
-      '48%'?: Partial<CSSStyleDeclaration>;
-      '49%'?: Partial<CSSStyleDeclaration>;
-      '50%'?: Partial<CSSStyleDeclaration>;
-      '51%'?: Partial<CSSStyleDeclaration>;
-      '52%'?: Partial<CSSStyleDeclaration>;
-      '53%'?: Partial<CSSStyleDeclaration>;
-      '54%'?: Partial<CSSStyleDeclaration>;
-      '55%'?: Partial<CSSStyleDeclaration>;
-      '56%'?: Partial<CSSStyleDeclaration>;
-      '57%'?: Partial<CSSStyleDeclaration>;
-      '58%'?: Partial<CSSStyleDeclaration>;
-      '59%'?: Partial<CSSStyleDeclaration>;
-      '60%'?: Partial<CSSStyleDeclaration>;
-      '61%'?: Partial<CSSStyleDeclaration>;
-      '62%'?: Partial<CSSStyleDeclaration>;
-      '63%'?: Partial<CSSStyleDeclaration>;
-      '64%'?: Partial<CSSStyleDeclaration>;
-      '65%'?: Partial<CSSStyleDeclaration>;
-      '66%'?: Partial<CSSStyleDeclaration>;
-      '67%'?: Partial<CSSStyleDeclaration>;
-      '68%'?: Partial<CSSStyleDeclaration>;
-      '69%'?: Partial<CSSStyleDeclaration>;
-      '70%'?: Partial<CSSStyleDeclaration>;
-      '71%'?: Partial<CSSStyleDeclaration>;
-      '72%'?: Partial<CSSStyleDeclaration>;
-      '73%'?: Partial<CSSStyleDeclaration>;
-      '74%'?: Partial<CSSStyleDeclaration>;
-      '75%'?: Partial<CSSStyleDeclaration>;
-      '76%'?: Partial<CSSStyleDeclaration>;
-      '77%'?: Partial<CSSStyleDeclaration>;
-      '78%'?: Partial<CSSStyleDeclaration>;
-      '79%'?: Partial<CSSStyleDeclaration>;
-      '80%'?: Partial<CSSStyleDeclaration>;
-      '81%'?: Partial<CSSStyleDeclaration>;
-      '82%'?: Partial<CSSStyleDeclaration>;
-      '83%'?: Partial<CSSStyleDeclaration>;
-      '84%'?: Partial<CSSStyleDeclaration>;
-      '85%'?: Partial<CSSStyleDeclaration>;
-      '86%'?: Partial<CSSStyleDeclaration>;
-      '87%'?: Partial<CSSStyleDeclaration>;
-      '88%'?: Partial<CSSStyleDeclaration>;
-      '89%'?: Partial<CSSStyleDeclaration>;
-      '90%'?: Partial<CSSStyleDeclaration>;
-      '91%'?: Partial<CSSStyleDeclaration>;
-      '92%'?: Partial<CSSStyleDeclaration>;
-      '93%'?: Partial<CSSStyleDeclaration>;
-      '94%'?: Partial<CSSStyleDeclaration>;
-      '95%'?: Partial<CSSStyleDeclaration>;
-      '96%'?: Partial<CSSStyleDeclaration>;
-      '97%'?: Partial<CSSStyleDeclaration>;
-      '98%'?: Partial<CSSStyleDeclaration>;
-      '99%'?: Partial<CSSStyleDeclaration>;
-      '100%'?: Partial<CSSStyleDeclaration>;
+    interface KeyFrameProperties extends OwnKeyFrameProperties {
+      /**
+       * Extend from interface namespace stuff is not working well
+       */
     }
 
     // addition for <fragment unwrap>

@@ -1,6 +1,6 @@
-export interface IVirtualNodeAttributes {
-  key?: string;
-  ref?: string;
+import { IAttributes } from './iattributes';
+
+export interface IVirtualNodeAttributes extends IAttributes {
   [attributeName: string]: any;
 }
 

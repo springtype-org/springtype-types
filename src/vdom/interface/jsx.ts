@@ -1138,9 +1138,9 @@ declare global {
       use: SVGAttributes;
     }
 
-    // addition for <fragment unwrap>
     interface IntrinsicElements {
-      fragment: HTMLAttributes;
+      // will be deleted by tsx factory
+      fragment: {};
     }
   }
 }
